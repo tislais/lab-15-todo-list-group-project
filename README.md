@@ -21,4 +21,4 @@
 
 ### Events
 
-events
+event
