@@ -1,8 +1,28 @@
-import { getUser, setUser, makeNewUser, checkIfUserExists, usernameAndPasswordMatch, login, logout, loggedInAndRedirect } from './local-storage-utils.js'l
+import { getUser, setUser, makeNewUser, checkIfUserExists, usernameAndPasswordMatch, login, logout, loggedInAndRedirect } from './local-storage-utils.js';
 
-const loginButton = document.getElementById('login-button');
+const form = document.querySelector('form');
 
-loginButton.addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('booger');
-})
+    // check if user exists
+        // if true, check if user name & pwd match 
+            // if true, log in and redirect
+            // else, show error msg
+        // else, create new user
+    const data = new FormData(form);
+    const username = data.get('username').toLowerCase();
+    const password = data.get('password');
+    const userExists = checkIfUserExists(username);
+    if (userExists) {
+        const matchingUserPass = usernameAndPasswordMatch(username, password);
+        if (matchingUserPass) {
+            login(username);
+            window.location = './todo';
+        } else {
+            alert('you done fucked up');
+        }
+    } else {
+        makeNewUser(username, password);
+        window.location = './todo';
+    }
+});
