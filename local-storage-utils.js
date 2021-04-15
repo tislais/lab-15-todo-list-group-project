@@ -10,6 +10,15 @@ export function setUser(user) {
     const stringyUser = JSON.stringify(user);
     localStorage.setItem(USER, stringyUser);
 }
+export function addToDo(todo) {
+    const newToDo = {
+        todo,
+        completed: false
+    };
+    const user = getUser();
+    user.todo.push(newToDo);
+}
+
 export function makeNewUser(username, password) {
     const newUser = {
         username: username,
