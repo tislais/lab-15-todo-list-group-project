@@ -12,9 +12,10 @@ form.addEventListener('submit', (e) => {
     const data = new FormData(form);
     const toDoItem = data.get('to-do-item');
     addToDo(toDoItem);
-    user.todo.forEach(todo => {
+
+    user.todos.forEach(item => {
         const toDoLi = document.createElement('li');
-        toDoLi.textContent = toDoItem;
+        toDoLi.textContent = item.todo;
         toDoUl.append(toDoLi);
-    })
+    });
 });
