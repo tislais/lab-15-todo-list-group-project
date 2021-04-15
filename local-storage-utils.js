@@ -20,12 +20,14 @@ export function makeNewUser(username, password) {
 }
 export function checkIfUserExists(username) {
     const user = getUser();
-    if (username === user.username) {
-        return true;
-    } else {
+    if (!user) {
         return false;
+    } else {
+        return username === user.username;
     }
 }
+
+
 export function usernameAndPasswordMatch(username, password) {
     const user = getUser();
     if (!checkIfUserExists(username) || user.password !== password) return false;
