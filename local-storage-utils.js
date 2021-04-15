@@ -17,3 +17,15 @@ export function makeNewUser(username, password) {
     };
     setUser(newUser);
 }
+export function checkIfUserExists(username) {
+    const user = getUser();
+    if (username === user.username) {
+        return true;
+    } else {
+        return false;
+    }
+}
+export function usernameAndPasswordMatch(username, password) {
+    const user = getUser();
+    if (!checkIfUserExists(username) || user.password !== )
+}
