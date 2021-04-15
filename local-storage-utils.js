@@ -1,4 +1,5 @@
 const USER = 'USER';
+const LOGGED_IN = 'LOGGED_IN';
 
 export function getUser() {
     const stringyUser = localStorage.getItem(USER);
@@ -27,5 +28,19 @@ export function checkIfUserExists(username) {
 }
 export function usernameAndPasswordMatch(username, password) {
     const user = getUser();
-    if (!checkIfUserExists(username) || user.password !== )
+    if (!checkIfUserExists(username) || user.password !== password) return false;
+    return true;
+}
+
+export function login(username) {
+    localStorage.setItem(LOGGED_IN, username);
+}
+
+export function logout(){
+    localStorage.setItem(LOGGED_IN, '');
+}
+
+export function loggedInAndRedirect(username) {
+    login(username);
+    window.location = './todo';
 }
