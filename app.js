@@ -10,6 +10,7 @@ form.addEventListener('submit', (e) => {
             // else, show error msg
         // else, create new user
     const data = new FormData(form);
+
     const username = data.get('username').toLowerCase();
     const password = data.get('password');
     const userExists = checkIfUserExists(username);

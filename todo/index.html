@@ -13,20 +13,20 @@
 </head>
 
 <body>
-    <div class="wrap">
         <main>
             <form>
-                <label>Username
-                    <input type="text" />
+                <label for="">
+                    <input name="to-do-item" type="text">
+                    <button id="to-do-add-button">add</button>
                 </label>
-                <label>Password
-                    <input type="password" />
-                </label>
-                <button>Submit</button>
             </form>
+        <div id="to-do-wrapper">
+            <ul id="to-do-ul">
+            </ul>
+        </div>
+        <button id="logout-button">logout</button>
         </main>
-    </div>
-    <script type="module" src="../app.js"></script>
+    <script type="module" src="./to-do.js"></script>
 </body>
 
 </html>
