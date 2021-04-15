@@ -16,7 +16,7 @@ export function addToDo(todo) {
         completed: false
     };
     const user = getUser();
-    user.todo.push(newToDo);
+    user.todos.push(newToDo);
     setUser(user);
 }
 
@@ -24,7 +24,7 @@ export function makeNewUser(username, password) {
     const newUser = {
         username: username,
         password: password,
-        todo: []
+        todos: []
     };
     setUser(newUser);
 }
