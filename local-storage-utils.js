@@ -17,6 +17,7 @@ export function addToDo(todo) {
     };
     const user = getUser();
     user.todo.push(newToDo);
+    setUser(user);
 }
 
 export function makeNewUser(username, password) {
@@ -47,7 +48,7 @@ export function login(username) {
     localStorage.setItem(LOGGED_IN, username);
 }
 
-export function logout(){
+export function logout() {
     localStorage.setItem(LOGGED_IN, '');
 }
 
