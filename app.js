@@ -1,5 +1,8 @@
-// import functions and grab DOM elements
+import { getUser, setUser, makeNewUser, checkIfUserExists, usernameAndPasswordMatch, login, logout, loggedInAndRedirect } from './local-storage-utils.js'l
 
-// initialize state
+const loginButton = document.getElementById('login-button');
 
-// set event listeners to update state and DOM
+loginButton.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('booger');
+})
