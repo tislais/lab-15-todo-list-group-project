@@ -13,19 +13,21 @@
 </head>
 
 <body>
+    <div class="wrap">
         <main>
             <form>
                 <label for="">
-                    <input name="to-do-item" type="text">
+                    <input name="to-do-item" placeholder="Add a task..." type="text">
                     <button id="to-do-add-button">add</button>
                 </label>
             </form>
-        <div id="to-do-wrapper">
-            <ul id="to-do-ul">
-            </ul>
-        </div>
-        <button id="logout-button">logout</button>
+            <div id="to-do-wrapper">
+                <ul id="to-do-ul">
+                </ul>
+            </div>
+            <button id="logout-button">logout</button>
         </main>
+    </div>
     <script type="module" src="./to-do.js"></script>
 </body>
 

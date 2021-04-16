@@ -6,3 +6,46 @@
 li {
     cursor: pointer;
 }
+.wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main {
+    margin-top: 100px;
+    background-color: #fff;
+    padding: 60px;
+    border-radius: 16px;
+    box-shadow: 2px 2px 2px #999;
+}
+body {
+    background-color: #eee;
+    font-size: 1.6rem;
+}
+input {
+    font-size: 1.6rem;
+    margin: 10px;
+    padding: 12px;
+}
+label {
+    text-align: right;
+}
+button  {
+    padding: 15px 30px;
+    margin: 20px auto;
+    border: 0;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    background-color: rgb(153, 81, 93);
+    color: white;
+    border-bottom: solid 6px rgb(93 42 50);
+}
+#to-do-wrapper {
+    width: 100%;
+}
