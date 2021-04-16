@@ -18,12 +18,11 @@ form {
     }
 main {
     margin-top: 100px;
-    background-color: #fff;
+    background-color: #eee;
     font-weight: 900;
     padding: 90px;
     border-radius: 16px;
     box-shadow: 2px 2px 2px #999;
-    /* background-image: url('../assets/geometric-repeat.png'); */
     background-size: fill;
     }
 body {
