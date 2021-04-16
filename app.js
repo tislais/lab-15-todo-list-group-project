@@ -1,6 +1,7 @@
-import { getUser, setUser, makeNewUser, checkIfUserExists, usernameAndPasswordMatch, login, logout, loggedInAndRedirect } from './local-storage-utils.js';
+import { makeNewUser, checkIfUserExists, usernameAndPasswordMatch, login } from './local-storage-utils.js';
 
 const form = document.querySelector('form');
+const errorMessage = document.getElementById('error-message');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -20,7 +21,8 @@ form.addEventListener('submit', (e) => {
             login(username);
             window.location = './todo';
         } else {
-            alert('you done fucked up');
+            errorMessage.textContent = 'Username and password don\'t match';
+            errorMessage.classList.remove('hidden');
         }
     } else {
         makeNewUser(username, password);

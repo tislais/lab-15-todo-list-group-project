@@ -1,1 +1,8 @@
 /* add home page styles here */
+.hidden {
+    display: none;
+}
+
+li {
+    cursor: pointer;
+}
