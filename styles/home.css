@@ -1,41 +1,47 @@
 /* add home page styles here */
 .hidden {
     display: none;
-}
-
+    }
 li {
     cursor: pointer;
-}
+    }
 .wrap {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items:center;
-}
+    }
 form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+    }
 main {
     margin-top: 100px;
     background-color: #fff;
-    padding: 60px;
+    font-weight: 900;
+    padding: 90px;
     border-radius: 16px;
     box-shadow: 2px 2px 2px #999;
-}
+    /* background-image: url('../assets/geometric-repeat.png'); */
+    background-size: fill;
+    }
 body {
     background-color: #eee;
     font-size: 1.6rem;
-}
+    background-image: url('../assets/geometric-repeat3.png');
+    background-size: fill;
+    background-color: rgb(153, 81, 93);;
+    }
 input {
     font-size: 1.6rem;
     margin: 10px;
     padding: 12px;
-}
+    border-radius: 12px;
+    }
 label {
     text-align: right;
-}
+    }
 button  {
     padding: 15px 30px;
     margin: 20px auto;
@@ -45,7 +51,20 @@ button  {
     background-color: rgb(153, 81, 93);
     color: white;
     border-bottom: solid 6px rgb(93 42 50);
-}
+    cursor:pointer;
+    }
+button:hover {
+    background-color: black; 
+    }
 #to-do-wrapper {
     width: 100%;
+    }
+header {
+    height: 200px;
+    width: auto;
+    background-image: url('../assets/to-do-header.png');
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-size: fill;
+    background-color: #eee;
 }
